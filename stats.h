@@ -2,11 +2,11 @@
 
 namespace Statistics {
     
-//     struct Stats{
-//         float average;
-//         float max;
-//         float min;
-//     };
+    struct Stats{
+        float average;
+        float max;
+        float min;
+    };
     
-    Stats ComputeStatistics(const std::vector<___>& ); 
+    Stats ComputeStatistics(const std::vector<float>& ); 
 }
