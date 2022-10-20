@@ -2,7 +2,7 @@
 
 Statistics::Stats Statistics::ComputeStatistics(const std::vector<float>& ) {
     //Implement statistics here
-    Statistics::Stats Stat;
+    Statistics::Stats Stat{0.0, 0.0, 0.0};
     
     return Stat;
 }
