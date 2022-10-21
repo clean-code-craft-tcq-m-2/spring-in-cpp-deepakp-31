@@ -2,7 +2,7 @@
 
 Statistics::Stats Statistics::ComputeStatistics(const std::vector<float>& numbers) {
     //Implement statistics here
-    Statistics::Stats Stat{0.0, 0.0, 0.0};
+    Statistics::Stats Stat{std::nanf("0.0"), std::nanf("0.0"), std::nanf("0.0")};
     
     float temp_min = numbers.at(0);
     float temp_max = numbers.at(0);
