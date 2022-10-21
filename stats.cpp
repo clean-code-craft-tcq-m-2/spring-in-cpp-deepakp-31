@@ -7,7 +7,7 @@ Statistics::Stats Statistics::ComputeStatistics(const std::vector<float>& number
     float temp_min = numbers.at(0);
     float temp_max = numbers.at(0);
     float sum =numbers.at(0);
-    for(auto i = ++numbers.begin(); i< numbers.size(); i++)
+    for(int i = 0; i< numbers.size(); i++)
     {
         if (temp_max < numbers.at(i))
         {
