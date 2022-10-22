@@ -38,7 +38,7 @@ Statistics::Stats Statistics::ComputeStatistics(const std::vector<float> &number
     return Stat;
 }
         
-void Alert::StatsAlerter::checkAndAlert(const std::vector<float> &numbers)
+void StatsAlerter::checkAndAlert(const std::vector<float> &numbers)
 {
     auto checkStat = Statistics::ComputeStatistics(numbers);
 
