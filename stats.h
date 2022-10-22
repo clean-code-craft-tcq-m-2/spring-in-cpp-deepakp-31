@@ -2,24 +2,18 @@
 #include <vector>
 #include <cmath>
 
-namespace Statistics
+namespace Statistics 
 {
-
-    struct Stats
-    {
+    
+    struct Stats{
         float average;
         float max;
         float min;
     };
-
-    Stats ComputeStatistics(const std::vector<float> &numbers);
-
-    void add(int a, int b)
-    {
-        std::cout << "Checking";
-        std::cout << a + b << std::endl;
-    }
+    
+    Stats ComputeStatistics(const std::vector<float>& numbers); 
 }
+
 
 namespace Alert
 {
