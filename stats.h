@@ -1,6 +1,9 @@
+#ifndef STATS
+#define STATS
+
 #include <iostream>
 #include <vector>
-#include <cmath>
+
 
 namespace Statistics {
     
@@ -13,6 +16,7 @@ namespace Statistics {
     Stats ComputeStatistics(const std::vector<float>& numbers); 
 }
 
+
 namespace Alert
 {
     //Base class IAlerter
@@ -20,6 +24,7 @@ namespace Alert
     {
     public:
         virtual void alert();
+        virtual ~IAlerter() {};
     };
 
     // Email
@@ -33,7 +38,7 @@ namespace Alert
             emailSent = false;
         }
 
-        void alert(){
+        virtual void alert(){
             emailSent= true;
         }
     };
@@ -49,7 +54,7 @@ namespace Alert
             ledGlows = false;
         }
 
-        void alert(){
+        virtual void alert(){
             ledGlows= true;
         }
     };
@@ -63,7 +68,7 @@ namespace Alert
 
     public:
         // Constructor
-        StatsAlerter(const float maxThreshold, std::vector<IAlerter *> alerters)
+        StatsAlerter(const float maxThreshold, std::vector<IAlerter*> alerters)
         {
             mThreshold = maxThreshold;
             alerts = alerters;
@@ -74,3 +79,5 @@ namespace Alert
         
     };
 }
+
+#endif //STATS
