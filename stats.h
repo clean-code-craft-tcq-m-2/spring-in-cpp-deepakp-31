@@ -23,7 +23,7 @@ namespace Statistics {
     class IAlerter
     {
     public:
-        virtual ~IAlerter() {};
+//         virtual ~IAlerter() {};
         virtual void alert();
         
     };
