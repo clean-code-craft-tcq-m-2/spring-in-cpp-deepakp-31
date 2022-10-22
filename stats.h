@@ -24,7 +24,7 @@ namespace Statistics {
     {
     public:
 //         virtual ~IAlerter() {};
-        virtual void alert();
+        virtual void alert() {}
         
     };
 
