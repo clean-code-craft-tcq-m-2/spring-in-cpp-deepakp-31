@@ -46,7 +46,7 @@ void Alert::StatsAlerter::checkAndAlert(const std::vector<float> &numbers)
     if (checkStat.max > mThreshold)
     {
         // alert
-        for (auto i = 0; i < alerts.size(); i++)
+        for (long unsigned int i = 0; i < alerts.size(); i++)
         {
             alerts.at(i)->alert();
         }
