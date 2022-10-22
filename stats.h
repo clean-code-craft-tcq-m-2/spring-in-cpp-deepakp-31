@@ -1,31 +1,33 @@
-// #ifndef STATS
-// #define STATS
-
 #include <iostream>
 #include <vector>
 #include <cmath>
 
+namespace Statistics
+{
 
-namespace Statistics {
-    
-    struct Stats{
+    struct Stats
+    {
         float average;
         float max;
         float min;
     };
-    
-    Stats ComputeStatistics(const std::vector<float>& numbers); 
+
+    Stats ComputeStatistics(const std::vector<float> &numbers);
+
+    void add(int a, int b)
+    {
+        std::cout << "Checking";
+        std::cout << a + b << std::endl;
+    }
 }
 
+namespace Alert
+{
 
-
-    //Base class IAlerter
     class IAlerter
     {
     public:
-//         virtual ~IAlerter() {};
         virtual void alert() {}
-        
     };
 
     // Email
@@ -39,7 +41,7 @@ namespace Statistics {
             emailSent = false;
         }
 
-        virtual void alert(){
+        void alert(){
             emailSent= true;
         }
     };
@@ -55,7 +57,7 @@ namespace Statistics {
             ledGlows = false;
         }
 
-        virtual void alert(){
+        void alert(){
             ledGlows= true;
         }
     };
@@ -69,7 +71,7 @@ namespace Statistics {
 
     public:
         // Constructor
-        StatsAlerter(const float maxThreshold, std::vector<IAlerter*> alerters)
+        StatsAlerter(const float maxThreshold, std::vector<IAlerter *> alerters)
         {
             mThreshold = maxThreshold;
             alerts = alerters;
@@ -79,6 +81,4 @@ namespace Statistics {
         void checkAndAlert(const std::vector<float> &numbers);
         
     };
-
-
-// #endif //STATS
+}
