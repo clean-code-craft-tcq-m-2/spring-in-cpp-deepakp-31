@@ -65,11 +65,11 @@ namespace Alert
 
     private:
         float mThreshold;
-        std::vector<IAlerter *> alerts;
+        std::vector<Alerts::IAlerter *> alerts;
 
     public:
         // Constructor
-        StatsAlerter(const float maxThreshold, std::vector<IAlerter*> alerters)
+        StatsAlerter(const float maxThreshold, std::vector<Alerts::IAlerter*> alerters)
         {
             mThreshold = maxThreshold;
             alerts = alerters;
