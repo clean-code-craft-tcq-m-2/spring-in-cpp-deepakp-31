@@ -23,8 +23,9 @@ namespace Statistics {
     class IAlerter
     {
     public:
-        virtual void alert();
         virtual ~IAlerter() {};
+        virtual void alert();
+        
     };
 
     // Email
