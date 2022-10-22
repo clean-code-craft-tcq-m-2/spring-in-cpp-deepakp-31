@@ -1,5 +1,5 @@
-#ifndef STATS
-#define STATS
+// #ifndef STATS
+// #define STATS
 
 #include <iostream>
 #include <vector>
@@ -18,8 +18,7 @@ namespace Statistics {
 }
 
 
-namespace Alert
-{
+
     //Base class IAlerter
     class IAlerter
     {
@@ -65,11 +64,11 @@ namespace Alert
 
     private:
         float mThreshold;
-        std::vector<Alerts::IAlerter *> alerts;
+        std::vector<IAlerter *> alerts;
 
     public:
         // Constructor
-        StatsAlerter(const float maxThreshold, std::vector<Alerts::IAlerter*> alerters)
+        StatsAlerter(const float maxThreshold, std::vector<IAlerter*> alerters)
         {
             mThreshold = maxThreshold;
             alerts = alerters;
@@ -79,6 +78,6 @@ namespace Alert
         void checkAndAlert(const std::vector<float> &numbers);
         
     };
-}
 
-#endif //STATS
+
+// #endif //STATS
